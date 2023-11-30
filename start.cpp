@@ -6,26 +6,42 @@
  * Copyright © 2014-2023 Rabbitpre.com. All Rights Reserved.
  */
 #include <iostream>
-#include "demo.h"
 using namespace std;
+
+#include <fstream>
+#include <string>
+
+class Person
+{
+public:
+  char m_Name[64];
+  int m_Age;
+};
+
+void test01()
+{
+  int i, j;
+  char test[1000];
+  ifstream ifs;
+  ifs.open("E:/c++/demo-c/dist/person.txt", ios::in);
+  if (!ifs.is_open())
+  {
+    cout << "close error" << endl;
+  }
+  while (ifs >> test)
+  {
+    cout << test[i] << endl;
+  }
+
+  ifs.close();
+}
 
 int main()
 {
-  struct Start
-  {
-    /* data */
-    char name;
-    int age;
-  };
-  int a = 10;
-  int b = 20;
-  swapNum(a, b);
-  cout << a << endl;
-  cout << b << endl;
-  const Start start = {'a', 20};
-  cout << (start.name) << endl;
-  cout << (start.age) << endl;
+
+  test01();
 
   system("pause");
+
   return 0;
-}
+};

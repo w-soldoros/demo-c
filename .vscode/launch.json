@@ -3,10 +3,10 @@
   "configurations": [
     {
       "name": "start.cpp 调试",
-      "preLaunchTask": "build start.cpp",
+      "preLaunchTask": "编译 start.cpp",
       "type": "cppdbg",
       "request": "launch",
-      "program": "C:\\Users\\lenovo\\Desktop\\demo-c\\dist\\${fileBasenameNoExtension}.exe",
+      "program": "E:\\c++\\demo-c\\dist\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
